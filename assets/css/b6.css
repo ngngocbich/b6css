@@ -64,7 +64,7 @@ html {
         padding: 24px 20px 21px 20px;
     }
     .logo {
-        width: 217px;
+        width: 50%;
     }
     .nav {
         display: none;
@@ -120,7 +120,7 @@ html {
     }
 
     .main-content__heading {
-        width: 89.333333%;
+        width: 89.33333%;
         font-size: 3.6rem;
     }
 
@@ -133,8 +133,6 @@ html {
         width: 89.333333%;
     }
 }
-
-/* Main */
 
  /* Post */
 
@@ -158,6 +156,10 @@ html {
 
 .post__infor--item {
     padding-left: 16px;
+}
+
+.snp-phone {
+    display: none;
 }
 
 .item-name {
@@ -209,10 +211,15 @@ html {
     font-size: 3.2rem;
 }
 
+.img {
+    display: flex;
+     
+}
+
 .post__img {
     padding: 52px 0 12px 0;
-    margin-left: 293px;
-    margin-right: 293px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post__img--note {
@@ -316,6 +323,33 @@ html {
     font-weight: 700;
 }
 
+@media screen and (max-width:768px) {
+.post__infor {
+}
+
+.post__img {
+    width: 100%;
+}
+.post__img--note {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.post__text--first,
+.post__text--second,
+.post__text--third,
+.post__text--fourth,
+.post__text--last,
+.post__list {
+    width: 90%;
+    font-size: 1.6rem;
+}
+.post__tag {
+    width: 90%;
+}
+}
+
+
  /* What to read next */ 
 
 .what-to-read__title {
@@ -406,16 +440,21 @@ input {
     font-family: 'Lato', sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-    html {
-        min-width: fit-content;
-        width: 100%;
-      }
-      main {
-        width: 100%;
-        min-width: fit-content;
-      }
-    }
+@media screen and (max-width: 1200px) {
+.what-to-read__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.grid-item .item-picture,
+.grid-item .item-text {
+    width: 100%;
+}
+
+.what-to-read__sign-up {
+    width: 100%;
+}
+
+}
 
 /* Footer */
 footer {
@@ -482,4 +521,30 @@ footer .copyright p {
 footer .copyright p:last-child {
   margin-top: 5px;
   padding-bottom: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin-top: 82px;
+      }
+      footer .footer__list a {
+        font-size: 2.8rem;
+      }
+      footer .footer__list a:nth-child(n+4) {
+        display: none;
+      }
+      footer .footer__mini-logo img {
+        width: 436.368px;
+      }
+      footer .footer__desc {
+        font-size: 2rem;
+        padding-top: 25px;
+      }
+      footer .footer__links a {
+        font-size: 2rem;
+      }
+      footer .footer__links .copyright p {
+        font-size: 2rem;
+      }
 }
